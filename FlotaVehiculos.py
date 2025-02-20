@@ -13,9 +13,9 @@ class FlotaVehiculos:
             self.cabeza = nuevoNodo
         else:
             actual = self.cabeza
-            while actual.siguiente:  # Ir al final de la lista
+            while actual.siguiente:  
                 actual = actual.siguiente
-            actual.siguiente = nuevoNodo  # Añadir el nuevo nodo al final
+            actual.siguiente = nuevoNodo  
 
     def mostrarVehiculos(self):
         actual = self.cabeza
@@ -40,9 +40,9 @@ class FlotaVehiculos:
         anterior = None
         while actual:
             if actual.dato.placa == placa:
-                if anterior:  # Si no es el primer nodo
+                if anterior: 
                     anterior.siguiente = actual.siguiente
-                else:  # Si es el primer nodo
+                else:  
                     self.cabeza = actual.siguiente
                 return True
             anterior = actual
